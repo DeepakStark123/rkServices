@@ -1,0 +1,66 @@
+body {
+    background-color: #15909B;
+    margin: 0;
+    padding: 0;
+}
+
+.login-card {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #ECF6F7;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.login-card .image-section {
+    background-color: #15909B;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card .image-section img {
+    width: 80%;
+    height: auto;
+}
+
+.login-card .form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-card .form-section h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-card .form-section .form-control {
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.login-card .form-section .btn-login {
+    background-color: #F7931E;
+    color: #ECF6F7;
+    border-radius: 25px;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.login-card .form-section .btn-login:hover {
+    background-color: #e6821c;
+}
+
+.login-card .form-section .form-text {
+    text-align: center;
+    margin-top: 20px;
+}

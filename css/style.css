@@ -1,0 +1,133 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 255px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #15909B;
+    border-right: 1px solid #dee2e6;
+    padding-top: 20px;
+    color: white;
+}
+
+.sidebar a {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, margin 0.3s, border-radius 0.3s;
+}
+
+/* .sidebar a:hover {
+    background-color: #0ebc9f;
+    margin: 0 10px;
+    border-radius: 10px;
+} */
+
+.sidebar a:focus,
+.sidebar a[aria-expanded="true"] {
+    background-color: #0ebc9f;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.nav-item a {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, margin 0.3s, border-radius 0.3s;
+}
+
+.sidebar a.active {
+    background-color: #0ebc9f;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.sidebar .submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.video-tutorials .card {
+    display: flex;
+    align-items: center;
+}
+
+.video-tutorials .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.faq {
+    margin-top: 20px;
+}
+
+.faq .card {
+    border: none;
+}
+
+.faq .card-header {
+    background-color: transparent;
+    border: none;
+}
+
+.faq .accordion-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.faq .accordion-button:not(.collapsed) {
+    color: #495057;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 1000;
+        padding-bottom: 10px;
+    }
+
+    .sidebar #header_content{
+        display: none !important;
+    }
+
+    .sidebar.d-none {
+        display: none !important;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,24 @@
+.app-sidebar{
+  background: #171930;
+}
+
+.sidebar-brand .brand-text{
+  color: white;
+}
+.nav-item p{
+  color: white;
+}
+
+.nav-item .nav-icon{
+  color: white;
+}
+
+#headertile:hover{
+  color: white
+}
+
+#innerbox{
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
