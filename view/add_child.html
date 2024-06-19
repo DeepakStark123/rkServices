@@ -141,12 +141,12 @@
                     <!--begin::Row-->
                     <div class="row">
                         <div class="col-sm-6">
-                            <h3 class="mb-0">Aadhar Update Application</h3>
+                            <h3 class="mb-0">Add Child Enrollment</h3>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-end">
-                                <li class="breadcrumb-item"><a href="#">Aadhar Services</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Full Domestic Update</li>
+                                <li class="breadcrumb-item"><a href="#">Apply Child Enroll</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Add Child</li>
                             </ol>
                         </div>
                     </div>
@@ -166,23 +166,14 @@
                             <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <h3>AADHAR UPDATE</h3>
+                                        <h3>Add Child Enrollment</h3>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
-                                        <label for="purpose" class="form-label">Purpose (You Can Select Using Ctrl+Click)</label>
-                                        <select id="purpose" class="form-control" multiple>
-                                            <option>ADDRESS</option>
-                                            <option>Gender</option>
-                                            <option>Email</option>
-                                            <option>Mobile</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="aadharNumber" class="form-label">Enter Full Aadhar No.</label>
-                                        <input type="text" class="form-control" id="aadharNumber" placeholder="Aadhar Number">
+                                        <label for="photoUpload" class="form-label">Upload Photo</label>
+                                        <input type="file" class="form-control" id="photoUpload">
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label for="fullName" class="form-label">Full Name</label>
@@ -191,6 +182,16 @@
                                     <div class="col-md-4 mb-3">
                                         <label for="fatherName" class="form-label">Father Name</label>
                                         <input type="text" class="form-control" id="fatherName" placeholder="Father Name">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="purpose" class="form-label">Purpose</label>
+                                        <select id="purpose" class="form-control">
+                                            <option selected>child_Enrollment</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="aadharNumber" class="form-label">Fathers Adhaar</label>
+                                        <input type="text" class="form-control" id="aadharNumber" placeholder="Adhaar Number">
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label for="dob" class="form-label">Date of Birth</label>
@@ -205,6 +206,10 @@
                                         <input type="email" class="form-control" id="email" placeholder="Email">
                                     </div>
                                     <div class="col-md-4 mb-3">
+                                        <label for="state" class="form-label">State</label>
+                                        <input type="text" class="form-control" id="state" placeholder="State">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
                                         <label for="district" class="form-label">District</label>
                                         <input type="text" class="form-control" id="district" placeholder="District">
                                     </div>
@@ -213,29 +218,26 @@
                                         <input type="text" class="form-control" id="pincode" placeholder="Pin Code">
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <label for="state" class="form-label">State</label>
-                                        <input type="text" class="form-control" id="state" placeholder="State">
-                                    </div>
-                                    <div class="col-md-4 mb-3">
                                         <label for="fullAddress" class="form-label">Full Address</label>
-                                        <input type="text" class="form-control" id="fullAddress" placeholder="Full Address">
+                                        <input type="text" class="form-control" id="fullAddress" placeholder="Full Address With Area Pin Code">
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <label for="proofOfIdentity" class="form-label">Proof Of Identity 200 KB</label>
+                                        <label for="proofOfIdentity" class="form-label">Enrolment Form 200 KB pdf</label>
                                         <input type="file" class="form-control" id="proofOfIdentity">
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <label for="proofOfAddress" class="form-label">Address Proof 200 KB</label>
-                                        <input type="file" class="form-control" id="proofOfAddress">
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="proofOfBirth" class="form-label">Proof Of Birth 200 KB</label>
+                                        <label for="proofOfBirth" class="form-label">Birth Certificate 200 KB pdf</label>
                                         <input type="file" class="form-control" id="proofOfBirth">
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <label for="enrollmentForm" class="form-label">Enrollment Form 200 KB</label>
-                                        <input type="file" class="form-control" id="enrollmentForm">
+                                        <label for="proofOfBirth" class="form-label">Caste certificate Or Identity Proof 200 KB pdf</label>
+                                        <input type="file" class="form-control" id="proofOfBirth">
                                     </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="proofOfAddress" class="form-label">Caste certificate/ Parents Aadhar pdf 200 KB</label>
+                                        <input type="file" class="form-control" id="proofOfAddress">
+                                    </div>
+                                   
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col text-center m-2">
@@ -294,7 +296,7 @@
         
         <!--begin::Footer-->
         <footer class="app-footer d-flex justify-content-center">
-            <strong>DESING AND DEVLOPED BY DEEPAK KUMAR</strong>
+            <strong>DESIGN AND DEVELOPED BY DEEPAK KUMAR</strong>
         </footer>
         <!--end::Footer-->
     </div> <!--end::Header-->
