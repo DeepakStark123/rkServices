@@ -80,7 +80,8 @@
             <div class="sidebar-wrapper">
                 <nav class="mt-2">
                     <!--begin::Sidebar Menu-->
-                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
+                        data-accordion="false">
                         <li class="nav-item menu-open">
                             <a href="../index.html" class="nav-link active">
                                 <i class="nav-icon bi bi-speedometer"></i>
@@ -223,7 +224,10 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="aadharList">
+                                        <!-- Data will be populated here -->
+                                    </tbody>
+                                    <!-- <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>bilkis</td>
@@ -321,6 +325,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                 -->
                                 </table>
                             </div>
                         </div>
@@ -396,6 +401,8 @@
             }
         });
     </script>
+    <!--Api Calling-->
+    <script src="../src/api/get_aadhar_list.js"></script>
 </body>
 
 </html>
