@@ -1,5 +1,8 @@
 //--Get-Adhar-Update-Form-Data----
-document.addEventListener('DOMContentLoaded', fetchAadhars);
+document.addEventListener('DOMContentLoaded', () => {
+    fetchAadhars();
+});
+
 // Fetch Aadhar Update Form Data
 async function fetchAadhars() {
     const response = await fetch('http://localhost:5001/api/aadhar');
@@ -26,4 +29,26 @@ async function fetchAadhars() {
         </tr>`;
         aadharList.insertAdjacentHTML('beforeend', row);
     });
+    // Initialize DataTable after data has been inserted
+    fetchPageList();
+}
+
+// Fetch Aadhar Update Form Data
+async function fetchPageList() {
+    $(document).ready(function () {
+        $('#customerTable').DataTable({
+            lengthChange: false,
+            pageLength: 5,
+            pagingType: 'full_numbers',
+            buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+            "initComplete": function (settings, json) {
+                var api = this.api();
+                var pageIndex = api.page();
+                if (pageIndex === 0) {
+                    $('.paginate_button.previous').addClass('disabled');
+                }
+            }
+        }).buttons().container().appendTo('#customerTable_wrapper .col-md-6:eq(0)');
+    });
+    
 }
